@@ -1,4 +1,5 @@
-# 🧠 Face-to-BMI: AI-Powered Body Mass Index Prediction
+# 🧠 Face-to-BMI:Predicting Body Mass Index Using Neural Networks
+
 
 **Face-to-BMI** is a deep learning application that estimates an individual's Body Mass Index (BMI) using facial images. Leveraging a pre-trained EfficientNetV2 model, this tool provides real-time BMI predictions via live camera feed or uploaded images. It also offers personalized health insights and maintains a user-specific BMI history.
 
