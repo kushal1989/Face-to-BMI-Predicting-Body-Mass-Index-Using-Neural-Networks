@@ -29,6 +29,15 @@ https://github.com/user-attachments/assets/d0cece41-14db-492f-bb82-64822c084b3e
 
 The BMI prediction model was trained on the [Illinois DOC Labeled Faces Dataset](https://www.kaggle.com/datasets/davidjfisher/illinois-doc-labeled-faces-dataset), which contains over 68,000 labeled mugshots. The dataset includes both frontal and side-profile images, each annotated with metadata such as date of birth and name, making it ideal for training facial recognition models.
 
+To train the model:
+
+1. Run `EfficientNetV2.py` to train the model.
+2. After training, you will receive a file named `Optimized_EfficientNetV2_Model.keras`. 
+3. Replace the `model_path` in `app.py` with the path to this saved model file:
+
+```python
+model_path = r"C:\path\to\your\Optimized_EfficientNetV2_Model.keras"
+
 ---
 
 ## 📊 BMI Classification Categories
