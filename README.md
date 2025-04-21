@@ -35,13 +35,10 @@ To train the model:
 2. After training, you will receive a file named `Optimized_EfficientNetV2_Model.keras`. 
 3. Replace the `model_path` in `app.py` with the path to this saved model file:
 
-```python
-model_path = r"C:\path\to\your\Optimized_EfficientNetV2_Model.keras"
-
----
+    ```python
+    model_path = r"C:\path\to\your\Optimized_EfficientNetV2_Model.keras"
 
 ## 📊 BMI Classification Categories
-
 - **Underweight**: BMI < 18.5  
   - *Advice*: Consider consuming a nutrient-rich diet with more calories and engaging in strength-building exercises.
 - **Normal**: 18.5 ≤ BMI < 25  
