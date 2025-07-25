@@ -52,25 +52,26 @@ def init_db():
 #          MODEL SETUP            #
 # ------------------------------- #
 
+import gdown
+
 @st.cache_resource
 def load_bmi_model():
-    """Load the pre-trained BMI model."""
-    model_path = r"C:\Users\USER\PycharmProjects\MINI PROJECT\Optimized_EfficientNetV2_Model.keras"
+    """Load the pre-trained BMI model, downloading if necessary."""
+    model_path = "Optimized_EfficientNetV2_Model.keras"
+    file_id = "1HHc6iyfsbmN2BjAMK6an7fE9XZDhoyP7"
+
+    # Download model if not present
     if not os.path.exists(model_path):
-        st.error(f"Model file not found at: {model_path}")
-        st.stop()
+        try:
+            url = f"https://drive.google.com/uc?id={file_id}"
+            st.info("Downloading BMI model...")
+            gdown.download(url, model_path, quiet=False)
+            st.success("Model downloaded successfully.")
+        except Exception as e:
+            st.error(f"Failed to download model: {e}")
+            st.stop()
+
     return load_model(model_path)
-
-
-bmi_model = load_bmi_model()
-
-# Normalization parameters
-bmi_mean = 25.0  # Replace with training mean
-bmi_std = 5.0  # Replace with training standard deviation
-
-# Initialize Haar Cascade for face detection
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-
 
 # ------------------------------- #
 #        HELPER FUNCTIONS         #
