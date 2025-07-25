@@ -4,3 +4,4 @@ streamlit
 tensorflow
 matplotlib
 pandas
+gdown
