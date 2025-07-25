@@ -1,6 +1,6 @@
 opencv-python
 numpy
 streamlit
-tensorflow==2.12.0
+tensorflow
 matplotlib
 pandas
