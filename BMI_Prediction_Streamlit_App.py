@@ -180,7 +180,7 @@ def login():
     """Handle user login and authentication."""
     st.markdown("<h1 style='text-align: center;'>Face to BMI</h1>", unsafe_allow_html=True)
     st.title("Login")
-    st.sidebar.image(r"C:\Users\USER\Downloads\facetobmi.png", use_column_width=True)
+    st.sidebar.image("facetobmi.png", use_column_width=True)
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
     login_button = st.button("Login")
