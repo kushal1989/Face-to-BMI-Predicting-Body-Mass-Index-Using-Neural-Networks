@@ -1,11 +1,21 @@
 import cv2
 import numpy as np
 import streamlit as st
+import gdown
+file_id = "1HHc6iyfsbmN2BjAMK6an7fE9XZDhoyP7"
+model_path = "model.h5"
+
+# Only download if not already present
+if not os.path.exists(model_path):
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, model_path, quiet=False)
+
 from tensorflow.keras.models import load_model
 import sqlite3
 import os
 import time
 import matplotlib.pyplot as plt
+
 
 
 # ------------------------------- #
@@ -35,6 +45,7 @@ def init_db():
 
     conn.commit()
     conn.close()
+
 
 
 # ------------------------------- #
