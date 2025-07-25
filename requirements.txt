@@ -1,8 +1,6 @@
-streamlit
 opencv-python
 numpy
-pillow
+streamlit
+tensorflow
 matplotlib
-torch
-torchvision
-cv2
+pandas
