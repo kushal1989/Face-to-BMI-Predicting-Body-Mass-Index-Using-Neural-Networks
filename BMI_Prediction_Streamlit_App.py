@@ -1,3 +1,4 @@
+import os
 import cv2
 import numpy as np
 import streamlit as st
@@ -12,7 +13,6 @@ if not os.path.exists(model_path):
 
 from tensorflow.keras.models import load_model
 import sqlite3
-import os
 import time
 import matplotlib.pyplot as plt
 
